@@ -1,0 +1,14 @@
+.card {
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+.card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.card li {
+    margin: 15px;
+    padding: 5px;
+}

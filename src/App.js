@@ -1,25 +1,40 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react"
+import Card from "./components/Card/Card"
+import UserForm from "./components/UserForm/UserForm"
+import Container from "./components/Container/Container"
 
-function App() {
+const App = () => {
+  const [task, setTask] = useState([]);
+  
+ 
+  const submit = tarea => {
+    setTask([...task, tarea]);
+
+  };
+ 
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div style={{ marginTop: '10%'}}>
+      <Container>
+      <Card>
+        <div style={{ padding: 20 }}>
+          <UserForm submit={submit} />
+        </div>
+    </Card>
+    <Card>
+      <ul>
+        {task.map((tarea, index) => (
+          <li key={index}>
+            {`Nombre: ${tarea.name}`} <br />
+            {`Descripción: ${tarea.description}`}
+          </li>
+        ))}
+      </ul>
+    </Card>
+      </Container>
     </div>
+    
+    
   );
-}
+};
 
-export default App;
+export default App
