@@ -9,7 +9,6 @@ const App = () => {
  
   const submit = tarea => {
     setTask([...task, tarea]);
-
   };
  
   return (
@@ -32,8 +31,6 @@ const App = () => {
     </Card>
       </Container>
     </div>
-    
-    
   );
 };
 
