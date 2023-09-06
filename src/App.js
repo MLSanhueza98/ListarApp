@@ -14,21 +14,21 @@ const App = () => {
   return (
     <div style={{ marginTop: '10%'}}>
       <Container>
-      <Card>
-        <div style={{ padding: 20 }}>
-          <UserForm submit={submit} />
-        </div>
-    </Card>
-    <Card>
-      <ul>
-        {task.map((tarea, index) => (
-          <li key={index}>
-            {`Nombre: ${tarea.name}`} <br />
-            {`Descripción: ${tarea.description}`}
-          </li>
-        ))}
-      </ul>
-    </Card>
+        <Card>
+          <div style={{ padding: 20 }}>
+            <UserForm submit={submit} />
+          </div>
+        </Card>
+        <Card>
+          <ul>
+            {task.map((tarea, index) => (
+              <li key={index}>
+                {`Nombre: ${tarea.name}`} <br />
+                {`Descripción: ${tarea.description}`}
+              </li>
+            ))}
+          </ul>
+        </Card>
       </Container>
     </div>
   );
